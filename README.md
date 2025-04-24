@@ -21,7 +21,7 @@ This installs the core package and additional requirements like sapien, mediapip
 
 **Step 1: Download the DexYCB dataset**
 
-Download a subset of the DexYCB dataset (e.g., `20200709-subject-01.tar.gz`), and also the `models` and `calibration` folders. Place them in the following structure:
+Download a subset of the DexYCB dataset (e.g., `20200709-subject-01.tar.gz`), and also the `models` and `calibration` folders from [DexYCB](https://dex-ycb.github.io/). Place them in the following structure:
 
 ```
 your_dexycb_dir/
@@ -36,7 +36,7 @@ Navigate to the position retargeting example folder and run:
 
 ```bash
 cd example/position_retargeting
-python dataset.py --dexycb-dir=PATH_TO_YOUR_DEXYCB_DIR_ROOT
+python3 dataset.py --dexycb-dir=PATH_TO_YOUR_DEXYCB_DIR_ROOT
 ```
 
 Replace `PATH_TO_YOUR_DEXYCB_DIR_ROOT` with the actual path to your DexYCB directory.
@@ -52,7 +52,7 @@ pip install chumpy opencv-python
 pip install -e .
 ```
 
-Download the MANO models from mano.is.tue.mpg.de and place them inside the manopth directory. Then run:
+Download the MANO models from [MANO website ↗](https://mano.is.tue.mpg.de) (It is superlink called Models & Code) and place them inside the manopth directory. Then run:
 
 ```bash
 unzip mano_v1_2.zip
@@ -69,13 +69,13 @@ pip install tyro pyyaml sapien==3.0.0b0
 **Step 5: Visualize human hand-object interaction**
 
 ```bash
-python visualize_hand_object.py --dexycb-dir=PATH_TO_YOUR_DEXYCB_DIR_ROOT
+python3 visualize_hand_object.py --dexycb-dir=PATH_TO_YOUR_DEXYCB_DIR_ROOT
 ```
 
 **Step 6: Visualize robot hand retargeting results**
 
 ```bash
-python visualize_hand_object.py --dexycb-dir=PATH_TO_YOUR_DEXYCB_DIR_ROOT --robots allegro shadow svh
+python3 visualize_hand_object.py --dexycb-dir=PATH_TO_YOUR_DEXYCB_DIR_ROOT --robots allegro shadow svh
 ```
 
 This command visualizes the retargeting results of the human hand motion to the specified robot hands.
